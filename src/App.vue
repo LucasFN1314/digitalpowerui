@@ -1,23 +1,43 @@
-<template>
-  <img alt="Vue logo" src="./assets/logo.png">
-</template>
+<script setup>
+import { ref } from "vue";
+import { Documentation, Container } from "vuedigitalpowerui";
 
-<script>
-
-export default {
-  name: 'App',
-  components: {
-  }
-}
 </script>
 
+<template>
+  <Documentation />
+</template>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+code {
+  padding: 1em;
+  display: block;
+  background: rgb(238, 238, 238);
+  color: black !important;
+}
+
+pre {
+  background: transparent;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+#carousel {
+  height: 200px;
+}
+
+.carimg {
+  height: 100%;
+}
+
+.gridd {
+  background: var(--primary);
+  padding: 1em;
+}
+
+.sidebarD {
+  height: 300px;
 }
 </style>

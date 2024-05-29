@@ -1,8 +1,8 @@
 {
-  "name": "digitalpowerui",
-  "version": "0.1.0",
+  "name": "vuedigitalpowerui",
+  "version": "0.1.6",
   "private": false,
-  "main": "dist/digitalpowerui.common.js",
+  "main": "dist/vuedigitalpowerui.common.js",
   "files": [
     "dist/*",
     "*.js",
@@ -10,18 +10,21 @@
   ],
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --name digitalpowerui ./src/components/index.js",
+    "build": "vue-cli-service build --target lib --name vuedigitalpowerui ./src/components/index.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "bootstrap": "^5.3.3",
+    "boxicons": "^2.1.4",
     "core-js": "^3.8.3",
-    "vue": "^3.2.13"
+    "sass": "^1.77.2",
+    "sass-loader": "^14.2.1",
+    "vue": "^3.2.13",
+    "vuedigitalpowerui": "^0.1.6"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
-    "@babel/eslint-parser": "^7.12.16",
     "@vue/cli-plugin-babel": "~5.0.0",
-    "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-service": "~5.0.0"
   },
   "browserslist": [
