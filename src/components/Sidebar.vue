@@ -14,7 +14,7 @@
                 </a>
             </li>
             <li v-for="(item, index) in items" :key="index">
-                <SidebarItem v-if="!item?.group" :item="item" />
+                <SidebarItem v-if="!item?.group" :item="item" @action="action"/>
                 <ul v-else groupitem>
                     <li nopointer grouplabel>
                         <a href="" :style="{ fill: item?.fill }">
@@ -23,7 +23,7 @@
                         </a>
                     </li>
                     <li v-for="(subitem, index) in item?.items" :key="index">
-                        <SidebarItem :item="subitem" :parent="item" />
+                        <SidebarItem :item="subitem" :parent="item" @action="action" />
                     </li>
                 </ul>
             </li>
@@ -36,9 +36,14 @@ import { ref, defineProps, onBeforeMount, onMounted } from "vue";
 import SidebarItem from "./SidebarItem.vue";
 
 const props = defineProps(["items", "id", "class", "background"]);
+const emit = defineEmits(["action"]);
 
 const Menu = ref([]);
 const menuState = ref(null);
+
+const action = (link) => {
+    emit("action", link);
+}
 
 const setMenu = () => {
     menuState.value = (!menuState.value);

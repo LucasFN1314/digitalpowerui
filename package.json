@@ -1,6 +1,6 @@
 {
-  "name": "vuedigitalpowerui",
-  "version": "0.1.6",
+  "name": "digitalpower",
+  "version": "0.1.0",
   "private": false,
   "main": "dist/vuedigitalpowerui.common.js",
   "files": [

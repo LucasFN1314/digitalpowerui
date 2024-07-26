@@ -1,6 +1,6 @@
 <template>
     <div v-if="!nuxt">
-        <a :href="getUrl" menuitem :class="{ 'active-item': isActive, 'active': state }" :style="{ fill: item?.fill }"
+        <a @click="handleRoute(getUrl)" menuitem :class="{ 'active-item': isActive, 'active': state }" :style="{ fill: item?.fill }"
             v-if="!item?.action">
             <box-icon class="icon" :name="item?.icon"></box-icon>
             <p>{{ item?.label }}</p>
@@ -24,8 +24,13 @@
 </template>
 
 <script setup>
-import { defineProps, defineEmits, computed, ref } from "vue";
+import { defineProps, defineEmits, computed, ref, onMounted } from "vue";
 const props = defineProps(["item", "parent", "nuxt"])
+const emit = defineEmits(["action"]);
+
+const handleRoute = (link) => {
+    emit("action", link);
+}
 
 const isActive = computed(() => {
     if (props.parent) {
