@@ -13,6 +13,7 @@ import Row from "./Row.vue";
 import Select from "./Select.vue";
 import Sidebar from "./Sidebar.vue";
 import SidebarItem from "./SidebarItem.vue";
+import OverlayCard from "./OverlayCard.vue";
 
 export { 
     HelloWorld,
@@ -30,4 +31,5 @@ export {
     Select,
     Sidebar,
     SidebarItem,
+    OverlayCard,
  };

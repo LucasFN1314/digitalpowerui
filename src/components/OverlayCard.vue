@@ -6,15 +6,16 @@
 </template>
 
 <script setup>
-    const props = defineProps(["img", "text"]);
-    const emits = defineEmits(["action"]);
-    const action = () => {
-        emits("action");
-    }
+const props = defineProps(["img", "text"]);
+const emits = defineEmits(["action"]);
+const action = () => {
+    emits("action");
+}
 </script>
 
 <style scoped lang="scss">
 .overlayedCard {
+    color: var(--font);
     cursor: pointer;
     width: 128px;
     height: 200px;
@@ -37,10 +38,22 @@
         left: 0;
         opacity: 0;
         transition: var(--duration);
+        background: rgba(0, 0, 0, 0.6);
     }
 
     &:hover::after {
         opacity: 1;
     }
+
+    &:hover+p {
+        opacity: 1;
+    }
+}
+
+p {
+    color: var(--font);
+    width: 80%;
+    opacity: 0;
+    z-index: 10 !important;
 }
 </style>
