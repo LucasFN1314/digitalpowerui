@@ -60,6 +60,7 @@ const Action = (msg = "Button Test") => {
       <li class="mt-1"><a href="#modal">Modal</a></li>
       <li class="mt-1"><a href="#upload">File Selector</a></li>
       <li class="mt-1"><a href="#sidebar">Sidebar Component</a></li>
+      <li class="mt-1"><a href="#overlayCard">Overlay Card</a></li>
       <li class="mt-1"><a href="#custom">Custom attributes</a></li>
       <li class="mt-1"><a href="#playground">Playground</a></li>
     </ul>
@@ -72,7 +73,7 @@ const Action = (msg = "Button Test") => {
       <li>Sass-loader</li>
       <li>Bootstrap</li>
     </ul>
-    <code class="mb-3">npm i boxicons sass sass-loader bootstrap vuedigitalpowerui</code>
+    <code class="mb-3">npm i boxicons sass sass-loader bootstrap digitalpower</code>
     <br>
     <b>Digital Power CDN</b>
     <code class="mt-2 mb-3">
@@ -97,7 +98,7 @@ const Action = (msg = "Button Test") => {
     <h2 underline id="input">Input</h2>
     <code class="mt-2">
       &lt;script setup&gt; <br>
-        import {Input} from 'digitalpowerui'; <br>
+        import {Input} from 'digitalpower'; <br>
         const bindValue = ref(''); <br>
         const value = "Text Input"; <br>
         const Placeholder = "Text placeholder"; <br>
@@ -139,7 +140,7 @@ const Action = (msg = "Button Test") => {
     <i><small>Working on Bootstrap (Col & Row)</small></i>
     <code class="mt-2">
       &lt;script setup&gt; <br>
-        import {Grid, Row, Col} from 'digitalpowerui'; <br>
+        import {Grid, Row, Col} from 'digitalpower'; <br>
       &lt;/script&gt; <br>
       <br>
       &lt;template&gt; <br>
