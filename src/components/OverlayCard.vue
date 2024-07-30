@@ -1,5 +1,5 @@
 <template>
-    <div class="overlayerCard" flex-center radius-border>
+    <div class="overlayedCard" flex-center radius-border @click="action">
         <img :src="img" alt="">
         <p>{{ text }}</p>
     </div>
