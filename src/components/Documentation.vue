@@ -5,6 +5,7 @@ import Col from "./Col.vue";
 import Row from "./Row.vue";
 import Grid from "./Grid.vue";
 import Input from "./Input.vue";
+import OverlayCard from "./OverlayCard.vue";
 import Carousel from "./Carousel.vue";
 import CarouselItem from "./CarouselItem.vue";
 import Modal from "./Modal.vue";
@@ -73,7 +74,7 @@ const Action = (msg = "Button Test") => {
       <li>Sass-loader</li>
       <li>Bootstrap</li>
     </ul>
-    <code class="mb-3">npm i boxicons sass sass-loader bootstrap digitalpower</code>
+    <code class="mb-3">npm i boxicons sass sass-loader bootstrap vuedigitalpowerui</code>
     <br>
     <b>Digital Power CDN</b>
     <code class="mt-2 mb-3">
@@ -98,7 +99,7 @@ const Action = (msg = "Button Test") => {
     <h2 underline id="input">Input</h2>
     <code class="mt-2">
       &lt;script setup&gt; <br>
-        import {Input} from 'digitalpower'; <br>
+        import {Input} from 'vuedigitalpowerui'; <br>
         const bindValue = ref(''); <br>
         const value = "Text Input"; <br>
         const Placeholder = "Text placeholder"; <br>
@@ -140,7 +141,7 @@ const Action = (msg = "Button Test") => {
     <i><small>Working on Bootstrap (Col & Row)</small></i>
     <code class="mt-2">
       &lt;script setup&gt; <br>
-        import {Grid, Row, Col} from 'digitalpower'; <br>
+        import {Grid, Row, Col} from 'vuedigitalpowerui'; <br>
       &lt;/script&gt; <br>
       <br>
       &lt;template&gt; <br>
@@ -242,6 +243,12 @@ const Action = (msg = "Button Test") => {
     <div class="sidebarD">
       <Sidebar id="sidebarTest" :items background="white" bordered></Sidebar>
     </div>
+
+    <br>
+    <div id="overlayCard">
+      <OverlayCard img="/DigitalPower.png" text="Overlay Card"></OverlayCard>
+    </div>
+
     <br>
     <h2 class="mt-4" underline id="custom">Custom attributes</h2>
     <small>Listed below the available custom attributes</small>

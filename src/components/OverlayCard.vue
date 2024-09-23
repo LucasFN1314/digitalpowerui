@@ -15,6 +15,7 @@ const action = () => {
 
 <style scoped lang="scss">
 .overlayedCard {
+    overflow: hidden;
     color: var(--font);
     cursor: pointer;
     width: 128px;
@@ -27,6 +28,7 @@ const action = () => {
         position: absolute;
         top: 0;
         left: 0;
+        object-fit: cover;
     }
 
     &::after {
@@ -41,19 +43,22 @@ const action = () => {
         background: rgba(0, 0, 0, 0.6);
     }
 
-    &:hover::after {
-        opacity: 1;
+    &:hover {
+        p {
+            opacity: 1 !important;
+        }
     }
 
-    &:hover+p {
+    &:hover::after {
         opacity: 1;
     }
 }
 
-p {
+.overlayedCard>p {
     color: var(--font);
     width: 80%;
     opacity: 0;
     z-index: 10 !important;
+    transition: var(--duration);
 }
 </style>
