@@ -22,6 +22,8 @@ const props = defineProps({
         default: "text"
     },
     selectLabel: "",
+    min: '',
+    max: ''
 });
 const internal = ref("");
 const focus = ref(false);
@@ -76,7 +78,7 @@ watch(() => props.modelValue, (newValue) => {
             v-model="internal" :placeholder :id :name :type custominput />
         <Button v-else-if="type === 'button'" :value :type :id :background :color @action="action" />
         <input v-else v-on:focus="setFocus(true)" v-on:focusout="setFocus(false)" v-model="internal" :placeholder :id
-            :name :type :disabled :style="{
+            :name :type :min :max :disabled :style="{
                 'background': background,
                 'color': color
             }" custominput>
