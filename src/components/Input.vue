@@ -13,8 +13,12 @@ const props = defineProps({
     value: {},
     relations: {},
     options: {},
-    background: {},
-    color: {},
+    background: {
+      default: "var(--primary)"
+    },
+    color: {
+      default: "white"
+    },
     modelValue: {},
     disabled: {},
     postFix: {},

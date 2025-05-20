@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from "vue";
-import { Documentation, Container } from "vuedigitalpowerui";
+// import { Documentation, Container } from "vuedigitalpowerui";
+import {Documentation} from "@/components";
 
 </script>
 

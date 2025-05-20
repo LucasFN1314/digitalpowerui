@@ -11,6 +11,7 @@ import CarouselItem from "./CarouselItem.vue";
 import Modal from "./Modal.vue";
 import FileUploader from "./FileUploader.vue";
 import Sidebar from "./Sidebar.vue";
+import Table from "@/components/Table.vue";
 
 const options = [
   {
@@ -43,6 +44,24 @@ const items = [
     fill: "dodgerblue"
   },
 ]
+const headers = [
+    'ID',
+    'Name'
+];
+
+const data = [
+  { id: '1', name: {html: '<p class="m-0">Mike Towers</p>'} },
+  { id: '2', name: 'Luis Fonsi' },
+  { id: '3', name: 'Karol G' },
+  { id: '4', name: 'Bad Bunny' },
+  { id: '5', name: 'Sebastián Yatra' },
+  { id: '6', name: 'Rosalía' },
+  { id: '7', name: 'Ozuna' },
+  { id: '8', name: 'J Balvin' },
+  { id: '9', name: 'Anuel AA' },
+  { id: '10', name: 'Rauw Alejandro' }
+];
+
 
 const htmlPlayground = ref("<h1 slide underline shadow class='m-0 p-3'>Test custom attributes with html below</h1>");
 const modal = ref(false);
@@ -53,6 +72,20 @@ const Action = (msg = "Button Test") => {
 
 <template>
   <Container fade title="Digital Power UI Documentation">
+    <div bound class="p-3" nopointer noselect radius-border>
+      <b>Atencion</b>
+      <br>
+      <i>
+        <small>
+          La siguiente documentacion es valida unicamente para el framework Vue JS 3.x.
+          <br>
+          Me encuentro trabajando en una futura actualizacion donde esta sea compatible con todos los frameworks y librerias
+          <br>
+          mediante un CDN.
+        </small>
+      </i>
+    </div>
+    <br>
     <h2 underline>Index</h2>
     <ul>
       <li><a href="#input">Input</a></li>
@@ -62,6 +95,7 @@ const Action = (msg = "Button Test") => {
       <li class="mt-1"><a href="#upload">File Selector</a></li>
       <li class="mt-1"><a href="#sidebar">Sidebar Component</a></li>
       <li class="mt-1"><a href="#overlayCard">Overlay Card</a></li>
+      <li class="mt-1"><a href="#table">Table</a></li>
       <li class="mt-1"><a href="#custom">Custom attributes</a></li>
       <li class="mt-1"><a href="#playground">Playground</a></li>
     </ul>
@@ -74,7 +108,7 @@ const Action = (msg = "Button Test") => {
       <li>Sass-loader</li>
       <li>Bootstrap</li>
     </ul>
-    <code class="mb-3">npm i boxicons sass sass-loader bootstrap vuedigitalpowerui</code>
+    <code class="mb-3">npm i boxicons sass sass-loader bootstrap digitalpower</code>
     <br>
     <b>Digital Power CDN</b>
     <code class="mt-2 mb-3">
@@ -99,7 +133,7 @@ const Action = (msg = "Button Test") => {
     <h2 underline id="input">Input</h2>
     <code class="mt-2">
       &lt;script setup&gt; <br>
-        import {Input} from 'vuedigitalpowerui'; <br>
+        import {Input} from 'digitalpower'; <br>
         const bindValue = ref(''); <br>
         const value = "Text Input"; <br>
         const Placeholder = "Text placeholder"; <br>
@@ -141,7 +175,7 @@ const Action = (msg = "Button Test") => {
     <i><small>Working on Bootstrap (Col & Row)</small></i>
     <code class="mt-2">
       &lt;script setup&gt; <br>
-        import {Grid, Row, Col} from 'vuedigitalpowerui'; <br>
+        import {Grid, Row, Col} from 'digitalpower'; <br>
       &lt;/script&gt; <br>
       <br>
       &lt;template&gt; <br>
@@ -245,11 +279,50 @@ const Action = (msg = "Button Test") => {
     </div>
 
     <br>
-    <div id="overlayCard">
+    <h1 id="overlayCard" underline>Overlay Card</h1>
+    <code>
+     import {OverlayCard} from 'digitalpower'; <br>
+      &lt;OverlayCard :text="'Overlay Card'" :img="digitalpower/logo.png"&gt;&lt;/OverlayCard&gt;
+    </code>
+    <br>
+    <div>
       <OverlayCard img="/DigitalPower.png" text="Overlay Card"></OverlayCard>
     </div>
+    <br>
 
     <br>
+    <h1 id="overlayCard" underline>Table</h1>
+    <code id="table">
+      import {Table} from 'digitalpower'; <br>
+      <br>const headers = [
+      <br>'ID',
+      <br>'Name'
+      <br>];
+
+      <br> const data = [
+      <br> { id: '1', name: {html: '&lt;p class="m-0">Mike Towers&lt;/p>'} },
+      <br> { id: '2', name: 'Luis Fonsi' },
+      <br> { id: '3', name: 'Karol G' },
+      <br> { id: '4', name: 'Bad Bunny' },
+      <br> { id: '5', name: 'Sebastián Yatra' },
+      <br> { id: '6', name: 'Rosalía' },
+      <br> { id: '7', name: 'Ozuna' },
+      <br> { id: '8', name: 'J Balvin' },
+      <br> { id: '9', name: 'Anuel AA' },
+      <br> { id: '10', name: 'Rauw Alejandro' }
+      <br>
+      <br>
+      // Length defines char limit for field content
+      <br> &lt;Table :headers :data length="30" @rightClick="(arg) => {}" @action="(arg) => {}">&lt;/Table>
+
+      ];
+    </code>
+    <br>
+    <div>
+      <Table :headers :data length="30"></Table>
+    </div>
+    <br>
+
     <h2 class="mt-4" underline id="custom">Custom attributes</h2>
     <small>Listed below the available custom attributes</small>
 
