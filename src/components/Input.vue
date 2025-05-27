@@ -78,7 +78,7 @@ watch(() => props.modelValue, (newValue) => {
             v-model="internal" @update="Update" @focusin="setFocus(true)" @focusout="setFocus(false)" customselect />
         <textarea v-else-if="type === 'textarea'" v-on:focus="setFocus(true)" v-on:focusout="setFocus(false)"
             v-model="internal" :placeholder :id :name :type custominput />
-        <Button v-else-if="type === 'button'" :value :type :id :background :color="'white'" @action="action" />
+        <Button v-else-if="type === 'button'" :value :type :id :background :color="color ?? 'white'" @action="action" />
         <input v-else v-on:focus="setFocus(true)" v-on:focusout="setFocus(false)" v-model="internal" :placeholder :id
             :name :type :min :max :disabled :style="{
                 'background': background,
