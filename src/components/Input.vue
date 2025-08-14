@@ -80,10 +80,7 @@ watch(() => props.modelValue, (newValue) => {
             v-model="internal" :placeholder :id :name :type custominput />
         <Button v-else-if="type === 'button'" :value :type :id :background :color="color ?? 'white'" @action="action" />
         <input v-else v-on:focus="setFocus(true)" v-on:focusout="setFocus(false)" v-model="internal" :placeholder :id
-            :name :type :min :max :disabled :style="{
-                'background': background,
-                'color': color
-            }" custominput>
+            :name :type :min :max :disabled custominput>
         </input>
     </div>
 </template>
