@@ -7,6 +7,7 @@ const props = defineProps({
     class: "",
     id: "",
     title: "",
+    noheader: false,
 });
 
 const emit = defineEmits(["close"]);
@@ -34,7 +35,7 @@ const clickOutsideHandler = () => {
 <template>
     <div overlay fade></div>
     <div class="custom-modal p-5" :class :id shadow fade radius-border>
-        <div class="row mb-5 pb-3 title">
+        <div class="row mb-5 pb-3 title" v-if="!noheader">
             <h5>
                 {{ title }}
             </h5>
