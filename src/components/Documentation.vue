@@ -12,6 +12,7 @@ import Modal from "./Modal.vue";
 import FileUploader from "./FileUploader.vue";
 import Sidebar from "./Sidebar.vue";
 import Table from "@/components/Table.vue";
+import Image from "./Image.vue";
 
 const options = [
   {
@@ -45,12 +46,12 @@ const items = [
   },
 ]
 const headers = [
-    'ID',
-    'Name'
+  'ID',
+  'Name'
 ];
 
 const data = [
-  { id: '1', name: {html: '<p class="m-0">Mike Towers</p>'} },
+  { id: '1', name: { html: '<p class="m-0">Mike Towers</p>' } },
   { id: '2', name: 'Luis Fonsi' },
   { id: '3', name: 'Karol G' },
   { id: '4', name: 'Bad Bunny' },
@@ -79,7 +80,8 @@ const Action = (msg = "Button Test") => {
         <small>
           La siguiente documentacion es valida unicamente para el framework Vue JS 3.x.
           <br>
-          Me encuentro trabajando en una futura actualizacion donde esta sea compatible con todos los frameworks y librerias
+          Me encuentro trabajando en una futura actualizacion donde esta sea compatible con todos los frameworks y
+          librerias
           <br>
           mediante un CDN.
         </small>
@@ -96,10 +98,12 @@ const Action = (msg = "Button Test") => {
       <li class="mt-1"><a href="#sidebar">Sidebar Component</a></li>
       <li class="mt-1"><a href="#overlayCard">Overlay Card</a></li>
       <li class="mt-1"><a href="#table">Table</a></li>
+      <li class="mt-1"><a href="#image">Image</a></li>
       <li class="mt-1"><a href="#custom">Custom attributes</a></li>
       <li class="mt-1"><a href="#playground">Playground</a></li>
     </ul>
     <br>
+
     <h2 underline>Requirements</h2>
     <ul>
       <li>Vue 3</li>
@@ -320,6 +324,28 @@ const Action = (msg = "Button Test") => {
     <br>
     <div>
       <Table :headers :data length="30"></Table>
+    </div>
+    <br>
+
+    <br>
+    <h1 id="image" underline>Image</h1>
+    <code id="table">
+      import {Image} from 'digitalpower'; <br>
+   
+      <br> &lt;Image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-vbE6O27KMekexBLwX6LRSiKb75pN9lPiTQ&s" 
+      <br>
+      width="500px" 
+      <br>
+      height="256px" 
+      <br>
+      @error="($evt) => {}" 
+      <br>
+      @load="($evt) => {}">&lt;/Image>
+    </code>
+    <br>
+    <div>
+      <Image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-vbE6O27KMekexBLwX6LRSiKb75pN9lPiTQ&s"
+        width="500px" height="256px" />
     </div>
     <br>
 

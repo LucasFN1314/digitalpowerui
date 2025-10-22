@@ -15,8 +15,9 @@ import Sidebar from "./Sidebar.vue";
 import SidebarItem from "./SidebarItem.vue";
 import OverlayCard from "./OverlayCard.vue";
 import Table from "./Table.vue";
+import Image from "./Image.vue";
 
-export { 
+export {
     HelloWorld,
     Button,
     Carousel,
@@ -33,5 +34,6 @@ export {
     Sidebar,
     SidebarItem,
     OverlayCard,
-    Table
- };
+    Table,
+    Image
+};
